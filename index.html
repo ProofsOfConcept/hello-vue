@@ -29,10 +29,28 @@
 </head>
 <body>
 
-<div  class="mainsec"></div>
+<div id="app">
+    <router-view></router-view>
+</div>
 
+<template id="home-template">
+    <div>
+        <p class="page-header">Home</p>
+        <a class="btn btn-primary" v-link="'list'">List</a>
+    </div>
+</template>
+
+<template id="list-template">
+    <div>
+        <p class="page-header">List Page</p>
+        <a class="btn btn-info" v-link="{path: '/'}">Home</a>
+    </div>
+</template>
+
+<script src="js/lib/jquery.js"></script>
 <script src="js/lib/bootstrap.min.js"></script>
 <script src="js/lib/vue.js"></script>
+<script src="js/lib/vue-router.js"></script>
 
 <script src="js/app/hello.js"></script>
 
